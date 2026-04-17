@@ -23,6 +23,7 @@ ruqm-project/
 ├── app.py            ← سيرفر Flask (يحتوي منطق API)
 ├── index.html        ← واجهة الموقع الكاملة
 ├── .env              ← مفاتيح API (لا تُرفع على GitHub)
+├── .env.example      ← مثال للمتغيرات البيئية
 ├── .gitignore        ← يحمي ملف .env
 ├── requirements.txt  ← مكتبات Python
 └── README.md         ← هذا الملف
@@ -62,9 +63,13 @@ pip install -r requirements.txt
 ```
 
 ### 4. أعدّ ملف `.env`
-أنشئ ملف `.env` في جذر المشروع وضع فيه:
+انسخ ملف المثال الموجود في المشروع:
+```bash
+cp .env.example .env
+```
+ثم افتح `.env` وضع مفتاح API الخاص بك:
 ```env
-NAHYA_API_KEY=your_api_key_here
+NAHYA_API_KEY=ضع_مفتاحك_هنا
 NAHYA_BASE_URL=https://elmodels.ngrok.app/v1
 NAHYA_MODEL=nuha-2.0
 ```
